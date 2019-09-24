@@ -1,10 +1,11 @@
 import React from 'react';
+import dotenv from 'dotenv';
 import SearchBar from './SearchBar';
-import YouTube from '../api/YouTube';
+import Youtube from '../api/Youtube';
 
 class App extends React.Component {
   onTermSubmit = term => {
-    YouTube.get('/search', {
+    Youtube.get('/search', {
       params: {
         q: term
       }
